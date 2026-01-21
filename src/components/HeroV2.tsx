@@ -1,10 +1,13 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, Code2, Sparkles, Zap, Layers } from 'lucide-react';
+import { ArrowRight, Layers } from 'lucide-react';
 import { useRef } from 'react';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 export default function HeroV2() {
+    const t = useTranslations('Hero');
     const containerRef = useRef<HTMLDivElement>(null);
     const { scrollY } = useScroll();
 
@@ -33,7 +36,7 @@ export default function HeroV2() {
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
                         </span>
-                        <span className="text-xs font-medium text-indigo-300 tracking-wide uppercase">V2.0 is Live</span>
+                        <span className="text-xs font-medium text-indigo-300 tracking-wide uppercase">{t('available')}</span>
                     </motion.div>
 
                     <motion.h1
@@ -42,9 +45,10 @@ export default function HeroV2() {
                         transition={{ duration: 0.7, delay: 0.1 }}
                         className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] mb-6 font-heading"
                     >
-                        Crafting <br />
+                        {t('title1')} <br />
+                        {t('title2')} <br />
                         <span className="relative inline-block">
-                            <span className="gradient-text relative z-10">Digital</span>
+                            <span className="gradient-text relative z-10">{t('title3')}</span>
                             <motion.svg
                                 initial={{ pathLength: 0, opacity: 0 }}
                                 animate={{ pathLength: 1, opacity: 1 }}
@@ -55,8 +59,7 @@ export default function HeroV2() {
                             >
                                 <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="2" fill="none" />
                             </motion.svg>
-                        </span> <br />
-                        Future.
+                        </span>
                     </motion.h1>
 
                     <motion.p
@@ -65,7 +68,7 @@ export default function HeroV2() {
                         transition={{ duration: 0.7, delay: 0.2 }}
                         className="text-lg md:text-xl text-zinc-400 max-w-xl mb-10 leading-relaxed"
                     >
-                        We build high-performance SaaS platforms and immersive web experiences that redefine industry standards.
+                        {t('description')}
                     </motion.p>
 
                     <motion.div
@@ -74,16 +77,16 @@ export default function HeroV2() {
                         transition={{ duration: 0.7, delay: 0.3 }}
                         className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
                     >
-                        <button className="group relative px-8 py-4 rounded-full bg-white text-zinc-950 font-bold text-lg overflow-hidden transition-all hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]">
+                        <Link href="/contact" className="group relative px-8 py-4 rounded-full bg-white text-zinc-950 font-bold text-lg overflow-hidden transition-all hover:shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)]">
                             <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
                             <span className="relative flex items-center gap-2">
-                                Start Building <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                                {t('cta')} <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                             </span>
-                        </button>
-                        <button className="px-8 py-4 rounded-full border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm text-white font-medium text-lg hover:bg-zinc-900 transition-colors flex items-center gap-2">
+                        </Link>
+                        <Link href="#works" className="px-8 py-4 rounded-full border border-zinc-800 bg-zinc-950/50 backdrop-blur-sm text-white font-medium text-lg hover:bg-zinc-900 transition-colors flex items-center gap-2">
                             <Layers size={20} className="text-zinc-400" />
-                            View Projects
-                        </button>
+                            {t('seeWork')}
+                        </Link>
                     </motion.div>
                 </div>
 
@@ -112,15 +115,6 @@ export default function HeroV2() {
                                 <div className="h-32 rounded-lg bg-zinc-800/30" />
                             </div>
                         </div>
-
-                        {/* Floating Badge */}
-                        <motion.div
-                            animate={{ y: [0, -10, 0] }}
-                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute -right-8 top-1/2 -translate-y-1/2 p-4 rounded-xl bg-indigo-600 shadow-xl border border-indigo-400/20 backdrop-blur-md"
-                        >
-                            <Sparkles className="text-white w-6 h-6" />
-                        </motion.div>
                     </motion.div>
 
                     {/* Background Card */}

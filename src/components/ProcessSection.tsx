@@ -3,35 +3,10 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { MessageSquare, Pencil, Code, Rocket, CheckCircle } from 'lucide-react';
-
-const steps = [
-    {
-        icon: MessageSquare,
-        title: 'Discovery Call',
-        description: 'We start with understanding your vision, goals, and requirements in detail.',
-        duration: '30 min call',
-    },
-    {
-        icon: Pencil,
-        title: 'Design & Prototype',
-        description: 'Our designers create stunning UI/UX prototypes in Figma for your approval.',
-        duration: '1-2 weeks',
-    },
-    {
-        icon: Code,
-        title: 'Development',
-        description: 'We build your product using cutting-edge technologies with clean, maintainable code.',
-        duration: '4-8 weeks',
-    },
-    {
-        icon: Rocket,
-        title: 'Launch & Support',
-        description: 'We handle deployment, monitoring, and provide ongoing support and maintenance.',
-        duration: 'Ongoing',
-    },
-];
+import { useTranslations } from 'next-intl';
 
 export default function ProcessSection() {
+    const t = useTranslations('Process');
     const containerRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -40,8 +15,35 @@ export default function ProcessSection() {
 
     const lineHeight = useTransform(scrollYProgress, [0.1, 0.9], ['0%', '100%']);
 
+    const steps = [
+        {
+            icon: MessageSquare,
+            titleKey: 'steps.discovery.title',
+            descriptionKey: 'steps.discovery.description',
+            durationKey: 'steps.discovery.duration',
+        },
+        {
+            icon: Pencil,
+            titleKey: 'steps.design.title',
+            descriptionKey: 'steps.design.description',
+            durationKey: 'steps.design.duration',
+        },
+        {
+            icon: Code,
+            titleKey: 'steps.development.title',
+            descriptionKey: 'steps.development.description',
+            durationKey: 'steps.development.duration',
+        },
+        {
+            icon: Rocket,
+            titleKey: 'steps.launch.title',
+            descriptionKey: 'steps.launch.description',
+            durationKey: 'steps.launch.duration',
+        },
+    ];
+
     return (
-        <section className="py-24 md:py-32 relative" ref={containerRef}>
+        <section id="process" className="py-24 md:py-32 relative" ref={containerRef}>
             <div className="max-w-4xl mx-auto px-4">
                 {/* Section header */}
                 <motion.div
@@ -51,13 +53,13 @@ export default function ProcessSection() {
                     className="text-center mb-20"
                 >
                     <span className="text-indigo-400 text-sm font-semibold uppercase tracking-widest">
-                        Our Process
+                        {t('label')}
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
-                        How we <span className="gradient-text">work</span>
+                        {t('title')} <span className="gradient-text">{t('titleHighlight')}</span>
                     </h2>
                     <p className="text-zinc-400 max-w-2xl mx-auto">
-                        A streamlined process designed to get you from idea to launch as quickly as possible.
+                        {t('description')}
                     </p>
                 </motion.div>
 
@@ -78,7 +80,7 @@ export default function ProcessSection() {
                     <div className="space-y-16 md:space-y-24">
                         {steps.map((step, index) => (
                             <motion.div
-                                key={step.title}
+                                key={step.titleKey}
                                 initial={{ opacity: 0, y: 40 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: '-100px' }}
@@ -102,10 +104,10 @@ export default function ProcessSection() {
                                         <span className="text-xs font-semibold text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full">
                                             Step {index + 1}
                                         </span>
-                                        <span className="text-xs text-zinc-500">{step.duration}</span>
+                                        <span className="text-xs text-zinc-500">{t(step.durationKey)}</span>
                                     </div>
-                                    <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                                    <p className="text-zinc-400 text-sm">{step.description}</p>
+                                    <h3 className="text-xl font-bold mb-2">{t(step.titleKey)}</h3>
+                                    <p className="text-zinc-400 text-sm">{t(step.descriptionKey)}</p>
                                 </div>
                             </motion.div>
                         ))}

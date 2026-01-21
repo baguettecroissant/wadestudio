@@ -1,0 +1,175 @@
+{
+    "Navbar": {
+        "work": "Réalisations",
+        "services": "Services",
+        "process": "Process",
+        "about": "À propos",
+        "contact": "Parlons-en"
+    },
+    "Hero": {
+        "available": "Disponible pour nouveaux projets",
+        "title1": "Nous transformons",
+        "title2": "vos idées en",
+        "title3": "Business Rentables",
+        "description": "Plus qu'une agence : nous sommes fondateurs de SaaS et éditeurs. Nous concevons des architectures web taillées pour la croissance (France & Maurice).",
+        "cta": "Démarrer un projet (Min. 5k€)",
+        "seeWork": "Voir nos réalisations"
+    },
+    "Services": {
+        "label": "Ce que nous faisons",
+        "title": "Services qui",
+        "titleHighlight": "scalent",
+        "description": "Du concept au lancement, nous gérons tout. Notre expertise couvre l'intégralité du cycle produit.",
+        "saas": {
+            "title": "SaaS & Web Apps",
+            "description": "Développement full-stack avec Next.js, Supabase, Laravel. Nous construisons des applications scalables qui grandissent avec votre business.",
+            "stat1": "Projets livrés",
+            "stat2": "Clients satisfaits"
+        },
+        "site": {
+            "title": "Site Vitrine Premium",
+            "description": "Design system soigné, SEO technique intégré, performance 100/100 Lighthouse."
+        },
+        "seo": {
+            "title": "Growth & SEO",
+            "description": "Stratégies d'acquisition et SEO sémantique. Comme pour nos sites éditeurs.",
+            "label": "Score SEO"
+        },
+        "api": {
+            "title": "Intégrations API",
+            "description": "Stripe, Auth0, Twilio, et plus. Connexion fluide avec tous vos services."
+        },
+        "mvp": {
+            "title": "MVP en Semaines",
+            "description": "Lancez votre idée vite. Nous livrons des MVPs production-ready en 4-8 semaines."
+        }
+    },
+    "Work": {
+        "title": "Réalisations",
+        "description": "Nous collaborons avec des fondateurs visionnaires pour construire des produits qui définissent leurs catégories.",
+        "viewAll": "Voir toutes les études de cas",
+        "caseStudy": "Étude de cas"
+    },
+    "Process": {
+        "label": "Notre Process",
+        "title": "Comment nous",
+        "titleHighlight": "travaillons",
+        "description": "Un process optimisé pour vous amener de l'idée au lancement le plus vite possible.",
+        "steps": {
+            "discovery": {
+                "title": "Discovery Call",
+                "description": "Nous commençons par comprendre votre vision, vos objectifs et vos besoins en détail.",
+                "duration": "30 min call"
+            },
+            "design": {
+                "title": "Design & Prototype",
+                "description": "Nos designers créent de superbes prototypes UI/UX dans Figma pour votre validation.",
+                "duration": "1-2 semaines"
+            },
+            "development": {
+                "title": "Développement",
+                "description": "Nous construisons votre produit avec des technologies de pointe et un code propre et maintenable.",
+                "duration": "4-8 semaines"
+            },
+            "launch": {
+                "title": "Lancement & Support",
+                "description": "Nous gérons le déploiement, le monitoring et fournissons un support et une maintenance continues.",
+                "duration": "Continu"
+            }
+        }
+    },
+    "Testimonials": {
+        "title": "La Confiance de Leaders",
+        "description": "Ne nous croyez pas sur parole. Voici ce que disent les fondateurs qui ont travaillé avec nous."
+    },
+    "CTA": {
+        "badge": "Accepte de nouveaux clients",
+        "title1": "Prêt à",
+        "titleHighlight": "disrupter",
+        "title2": "le marché ?",
+        "description": "Transformons votre idée en réalité. Planifiez un appel découverte gratuit et voyons comment nous pouvons vous aider à construire la prochaine grande chose.",
+        "button": "Commencer",
+        "note": "Sans engagement • Consultation gratuite"
+    },
+    "Footer": {
+        "cta": "PARLONS",
+        "description": "Un projet en tête ? Nous serions ravis d'en discuter. Construisons quelque chose d'incroyable ensemble.",
+        "startProject": "Démarrer un projet",
+        "sitemap": "Plan du site",
+        "home": "Accueil",
+        "work": "Réalisations",
+        "services": "Services",
+        "process": "Process",
+        "socials": "Réseaux",
+        "legal": "Légal",
+        "privacy": "Politique de confidentialité",
+        "terms": "Conditions d'utilisation",
+        "location": "Localisation",
+        "address": "Grand Baie, Maurice",
+        "global": "Basés à Maurice, Opérant dans le monde entier",
+        "rights": "Tous droits réservés.",
+        "madeIn": "Conçu & Développé avec {heart} à Maurice"
+    },
+    "About": {
+        "back": "Retour",
+        "location": "France & Maurice",
+        "title": "Nous sommes",
+        "titleHighlight": "Wade Studio",
+        "description1": "Équipe de développeurs full-stack et fondateurs de SaaS basée entre la France et l'Île Maurice. Nous transformons des idées ambitieuses en produits digitaux qui génèrent des résultats.",
+        "description2": "Passionnés par l'entrepreneuriat digital, nous ne nous contentons pas de coder : nous concevons des architectures pensées pour la croissance, nous optimisons pour la conversion, et nous livrons des produits qui font la différence sur le marché.",
+        "cta": "Démarrer un projet",
+        "available": "Disponible",
+        "stats": {
+            "projects": "Projets Livrés",
+            "experience": "Années d'Expérience",
+            "saas": "SaaS Lancés",
+            "satisfaction": "Satisfaction Client"
+        },
+        "valuesTitle": "Nos",
+        "valuesTitleHighlight": "Valeurs",
+        "valuesDescription": "Ce qui nous distingue et guide chaque projet que nous entreprenons.",
+        "skills": "Compétences Techniques",
+        "journeyTitle": "Notre",
+        "journeyTitleHighlight": "Parcours",
+        "current": "Actuel",
+        "collab": "Prêt à",
+        "collabHighlight": "collaborer",
+        "collabDescription": "Discutons de votre projet et voyons comment nous pouvons vous aider à atteindre vos objectifs."
+    },
+    "Contact": {
+        "back": "Retour",
+        "backHome": "Retour à l'accueil",
+        "title": "Parlons de votre",
+        "titleHighlight": "projet",
+        "description": "Décrivez-nous votre vision et nous vous aiderons à la concrétiser. Réponse garantie sous 24h.",
+        "success": "Message envoyé !",
+        "successDescription": "Merci pour votre message. Nous reviendrons vers vous dans les plus brefs délais.",
+        "contactInfo": "Informations de contact",
+        "email": "Email",
+        "phone": "Téléphone",
+        "locationLabel": "Localisation",
+        "formName": "Nom complet",
+        "formEmail": "Email",
+        "formCompany": "Entreprise",
+        "formCompanyPlaceholder": "Votre entreprise",
+        "formPhone": "Téléphone",
+        "prestationType": "Type de prestation",
+        "budget": "Budget estimé",
+        "duration": "Durée souhaitée",
+        "projectDescription": "Décrivez votre projet",
+        "projectPlaceholder": "Parlez-nous de votre projet, vos objectifs, votre vision...",
+        "submit": "Envoyer ma demande",
+        "submitting": "Envoi en cours...",
+        "consent": "En soumettant ce formulaire, vous acceptez d'être contacté par notre équipe.",
+        "stats": {
+            "projects": "Projets livrés",
+            "satisfaction": "Satisfaction",
+            "response": "Réponse",
+            "rating": "Rating"
+        }
+    },
+    "Metadata": {
+        "title": "Wade Studio | Architecte Digital & SaaS Builder",
+        "description": "Fondateurs de SaaS et éditeurs de sites. Nous concevons des architectures web performantes et des produits digitaux rentables pour la France et Maurice."
+    }
+}

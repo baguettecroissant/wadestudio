@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { Code2, Palette, Zap, Database, Layers, Rocket } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 interface CardProps {
     children: React.ReactNode;
@@ -79,6 +80,8 @@ function TiltCard({ children, className = '', glowColor = 'indigo' }: CardProps)
 }
 
 export default function BentoGrid() {
+    const t = useTranslations('Services');
+
     return (
         <section id="services" className="py-24 md:py-32 relative">
             <div className="max-w-6xl mx-auto px-4">
@@ -90,13 +93,13 @@ export default function BentoGrid() {
                     className="text-center mb-16"
                 >
                     <span className="text-indigo-400 text-sm font-semibold uppercase tracking-widest">
-                        What We Do
+                        {t('label')}
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
-                        Services that <span className="gradient-text">scale</span>
+                        {t('title')} <span className="gradient-text">{t('titleHighlight')}</span>
                     </h2>
                     <p className="text-zinc-400 max-w-2xl mx-auto">
-                        From concept to launch, we handle everything. Our expertise spans the entire product lifecycle.
+                        {t('description')}
                     </p>
                 </motion.div>
 
@@ -114,20 +117,19 @@ export default function BentoGrid() {
                                 </div>
                             </div>
                             <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                                Full-Stack SaaS Development
+                                {t('saas.title')}
                             </h3>
                             <p className="text-zinc-400 mb-8 flex-grow">
-                                End-to-end development using Next.js, Supabase, and modern cloud infrastructure.
-                                We build scalable applications that grow with your business.
+                                {t('saas.description')}
                             </p>
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="glass rounded-xl p-4">
-                                    <span className="text-3xl font-bold gradient-text">50+</span>
-                                    <p className="text-sm text-zinc-500 mt-1">Projects delivered</p>
+                                    <span className="text-3xl font-bold gradient-text">10+</span>
+                                    <p className="text-sm text-zinc-500 mt-1">{t('saas.stat1')}</p>
                                 </div>
                                 <div className="glass rounded-xl p-4">
-                                    <span className="text-3xl font-bold gradient-text">99%</span>
-                                    <p className="text-sm text-zinc-500 mt-1">Client satisfaction</p>
+                                    <span className="text-3xl font-bold gradient-text">100%</span>
+                                    <p className="text-sm text-zinc-500 mt-1">{t('saas.stat2')}</p>
                                 </div>
                             </div>
                         </div>
@@ -140,9 +142,9 @@ export default function BentoGrid() {
                                 <Palette className="text-purple-400" size={20} />
                             </div>
                         </div>
-                        <h3 className="text-xl font-bold mb-2">Design Systems</h3>
+                        <h3 className="text-xl font-bold mb-2">{t('site.title')}</h3>
                         <p className="text-zinc-400 text-sm">
-                            Pixel-perfect UI/UX with Figma, ensuring consistency across your entire product.
+                            {t('site.description')}
                         </p>
                         <div className="mt-6 flex gap-2">
                             <div className="w-8 h-8 rounded-lg bg-purple-500" />
@@ -159,19 +161,19 @@ export default function BentoGrid() {
                                 <Zap className="text-emerald-400" size={20} />
                             </div>
                         </div>
-                        <h3 className="text-xl font-bold mb-2">Lightning Fast</h3>
+                        <h3 className="text-xl font-bold mb-2">{t('seo.title')}</h3>
                         <p className="text-zinc-400 text-sm mb-6">
-                            Performance-first approach. Every millisecond counts.
+                            {t('seo.description')}
                         </p>
                         <div className="glass rounded-xl p-4">
                             <div className="flex justify-between items-center mb-2">
-                                <span className="text-sm text-zinc-500">Performance Score</span>
-                                <span className="text-emerald-400 font-bold">98/100</span>
+                                <span className="text-sm text-zinc-500">{t('seo.label')}</span>
+                                <span className="text-emerald-400 font-bold">100/100</span>
                             </div>
                             <div className="h-2 bg-zinc-800 rounded-full overflow-hidden">
                                 <motion.div
                                     initial={{ width: 0 }}
-                                    whileInView={{ width: '98%' }}
+                                    whileInView={{ width: '100%' }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 1.5, delay: 0.5 }}
                                     className="h-full bg-gradient-to-r from-emerald-500 to-emerald-400 rounded-full"
@@ -187,9 +189,9 @@ export default function BentoGrid() {
                                 <Layers className="text-indigo-400" size={20} />
                             </div>
                         </div>
-                        <h3 className="text-xl font-bold mb-2">API Integration</h3>
+                        <h3 className="text-xl font-bold mb-2">{t('api.title')}</h3>
                         <p className="text-zinc-400 text-sm">
-                            Seamless third-party integrations with Stripe, Auth0, Twilio, and more.
+                            {t('api.description')}
                         </p>
                     </TiltCard>
 
@@ -200,9 +202,9 @@ export default function BentoGrid() {
                                 <Rocket className="text-purple-400" size={20} />
                             </div>
                         </div>
-                        <h3 className="text-xl font-bold mb-2">MVP in Weeks</h3>
+                        <h3 className="text-xl font-bold mb-2">{t('mvp.title')}</h3>
                         <p className="text-zinc-400 text-sm">
-                            Launch your idea fast. We deliver production-ready MVPs in 4-8 weeks.
+                            {t('mvp.description')}
                         </p>
                     </TiltCard>
                 </div>

@@ -1,0 +1,175 @@
+{
+    "Navbar": {
+        "work": "Work",
+        "services": "Services",
+        "process": "Process",
+        "about": "About",
+        "contact": "Let's Talk"
+    },
+    "Hero": {
+        "available": "Available for new projects",
+        "title1": "We transform",
+        "title2": "your ideas into",
+        "title3": "Profitable Business",
+        "description": "More than an agency: we are SaaS founders and publishers. We design web architectures built for growth (France & Mauritius).",
+        "cta": "Start a project (Min. 5k€)",
+        "seeWork": "See our work"
+    },
+    "Services": {
+        "label": "What we do",
+        "title": "Services that",
+        "titleHighlight": "scale",
+        "description": "From concept to launch, we handle everything. Our expertise covers the entire product cycle.",
+        "saas": {
+            "title": "SaaS & Web Apps",
+            "description": "Full-stack development with Next.js, Supabase, Laravel. We build scalable applications that grow with your business.",
+            "stat1": "Projects delivered",
+            "stat2": "Satisfied clients"
+        },
+        "site": {
+            "title": "Premium Showcase Site",
+            "description": "Polished design system, built-in technical SEO, 100/100 Lighthouse performance."
+        },
+        "seo": {
+            "title": "Growth & SEO",
+            "description": "Acquisition strategies and semantic SEO. Just like for our publisher sites.",
+            "label": "SEO Score"
+        },
+        "api": {
+            "title": "API Integrations",
+            "description": "Stripe, Auth0, Twilio, and more. Seamless connection with all your services."
+        },
+        "mvp": {
+            "title": "MVP in Weeks",
+            "description": "Launch your idea fast. We deliver production-ready MVPs in 4-8 weeks."
+        }
+    },
+    "Work": {
+        "title": "Selected Work",
+        "description": "We partner with visionary founders to build products that define categories.",
+        "viewAll": "View all Case Studies",
+        "caseStudy": "Case Study"
+    },
+    "Process": {
+        "label": "Our Process",
+        "title": "How we",
+        "titleHighlight": "work",
+        "description": "A streamlined process designed to get you from idea to launch as quickly as possible.",
+        "steps": {
+            "discovery": {
+                "title": "Discovery Call",
+                "description": "We start with understanding your vision, goals, and requirements in detail.",
+                "duration": "30 min call"
+            },
+            "design": {
+                "title": "Design & Prototype",
+                "description": "Our designers create stunning UI/UX prototypes in Figma for your approval.",
+                "duration": "1-2 weeks"
+            },
+            "development": {
+                "title": "Development",
+                "description": "We build your product using cutting-edge technologies with clean, maintainable code.",
+                "duration": "4-8 weeks"
+            },
+            "launch": {
+                "title": "Launch & Support",
+                "description": "We handle deployment, monitoring, and provide ongoing support and maintenance.",
+                "duration": "Ongoing"
+            }
+        }
+    },
+    "Testimonials": {
+        "title": "Trusted by Industry Leaders",
+        "description": "Don't just take our word for it. Here's what founders say about working with us."
+    },
+    "CTA": {
+        "badge": "Accepting new clients",
+        "title1": "Ready to",
+        "titleHighlight": "disrupt",
+        "title2": "the market?",
+        "description": "Let's turn your idea into a reality. Schedule a free discovery call and let's discuss how we can help you build the next big thing.",
+        "button": "Get Started",
+        "note": "No commitment required • Free consultation"
+    },
+    "Footer": {
+        "cta": "LET'S TALK",
+        "description": "Have a project in mind? We'd love to hear about it. Let's build something amazing together.",
+        "startProject": "Start a Project",
+        "sitemap": "Sitemap",
+        "home": "Home",
+        "work": "Work",
+        "services": "Services",
+        "process": "Process",
+        "socials": "Socials",
+        "legal": "Legal",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "location": "Location",
+        "address": "Grand Baie, Mauritius",
+        "global": "Based in Mauritius, Operating Worldwide",
+        "rights": "All rights reserved.",
+        "madeIn": "Designed & Built with {heart} in Mauritius"
+    },
+    "About": {
+        "back": "Back",
+        "location": "France & Mauritius",
+        "title": "We are",
+        "titleHighlight": "Wade Studio",
+        "description1": "A team of full-stack developers and SaaS founders based between France and Mauritius. We transform ambitious ideas into digital products that deliver results.",
+        "description2": "Passionate about digital entrepreneurship, we don't just code: we design architectures built for growth, we optimize for conversion, and we deliver products that make a difference in the market.",
+        "cta": "Start a project",
+        "available": "Available",
+        "stats": {
+            "projects": "Projects Delivered",
+            "experience": "Years Experience",
+            "saas": "SaaS Launched",
+            "satisfaction": "Client Satisfaction"
+        },
+        "valuesTitle": "Our",
+        "valuesTitleHighlight": "Values",
+        "valuesDescription": "What sets us apart and guides every project we undertake.",
+        "skills": "Technical Skills",
+        "journeyTitle": "Our",
+        "journeyTitleHighlight": "Journey",
+        "current": "Current",
+        "collab": "Ready to",
+        "collabHighlight": "collaborate",
+        "collabDescription": "Let's discuss your project and see how we can help you achieve your goals."
+    },
+    "Contact": {
+        "back": "Back",
+        "backHome": "Back to home",
+        "title": "Let's talk about your",
+        "titleHighlight": "project",
+        "description": "Describe your vision and we'll help you bring it to life. Response guaranteed within 24h.",
+        "success": "Message sent!",
+        "successDescription": "Thank you for your message. We'll get back to you as soon as possible.",
+        "contactInfo": "Contact information",
+        "email": "Email",
+        "phone": "Phone",
+        "locationLabel": "Location",
+        "formName": "Full name",
+        "formEmail": "Email",
+        "formCompany": "Company",
+        "formCompanyPlaceholder": "Your company",
+        "formPhone": "Phone",
+        "prestationType": "Service type",
+        "budget": "Estimated budget",
+        "duration": "Desired timeline",
+        "projectDescription": "Describe your project",
+        "projectPlaceholder": "Tell us about your project, goals, and vision...",
+        "submit": "Send my request",
+        "submitting": "Sending...",
+        "consent": "By submitting this form, you agree to be contacted by our team.",
+        "stats": {
+            "projects": "Projects delivered",
+            "satisfaction": "Satisfaction",
+            "response": "Response",
+            "rating": "Rating"
+        }
+    },
+    "Metadata": {
+        "title": "Wade Studio | Digital Architect & SaaS Builder",
+        "description": "SaaS founders and site publishers. We design high-performance web architectures and profitable digital products for France and Mauritius."
+    }
+}

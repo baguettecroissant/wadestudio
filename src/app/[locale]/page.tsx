@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import HeroV2 from "@/components/HeroV2";
+import Hero from "@/components/Hero";
 import LogoTicker from "@/components/LogoTicker";
 import WorkSection from "@/components/WorkSection";
 import TestimonialTicker from "@/components/TestimonialTicker";
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className="relative min-h-screen">
       <Navbar />
-      <HeroV2 />
+      <Hero />
       <LogoTicker />
       <WorkSection />
       <BentoGrid />

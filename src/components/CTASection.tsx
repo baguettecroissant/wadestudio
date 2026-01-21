@@ -2,8 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function CTASection() {
+    const t = useTranslations('CTA');
+
     return (
         <section id="contact" className="py-24 md:py-32 relative">
             <div className="max-w-5xl mx-auto px-4">
@@ -38,7 +41,7 @@ export default function CTASection() {
                             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8"
                         >
                             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-                            <span className="text-sm text-zinc-400">Accepting new clients</span>
+                            <span className="text-sm text-zinc-400">{t('badge')}</span>
                         </motion.div>
 
                         {/* Heading */}
@@ -49,9 +52,9 @@ export default function CTASection() {
                             transition={{ delay: 0.3 }}
                             className="text-4xl md:text-6xl font-bold mb-6"
                         >
-                            Ready to <span className="gradient-text">disrupt</span>
+                            {t('title1')} <span className="gradient-text">{t('titleHighlight')}</span>
                             <br />
-                            the market?
+                            {t('title2')}
                         </motion.h2>
 
                         {/* Description */}
@@ -62,8 +65,7 @@ export default function CTASection() {
                             transition={{ delay: 0.4 }}
                             className="text-zinc-400 text-lg max-w-xl mx-auto mb-10"
                         >
-                            Let&apos;s turn your idea into a reality. Schedule a free discovery call
-                            and let&apos;s discuss how we can help you build the next big thing.
+                            {t('description')}
                         </motion.p>
 
                         {/* CTA Button */}
@@ -79,7 +81,7 @@ export default function CTASection() {
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                             >
-                                Get Started
+                                {t('button')}
                                 <ArrowRight
                                     size={20}
                                     className="group-hover:translate-x-1 transition-transform"
@@ -87,7 +89,7 @@ export default function CTASection() {
                             </motion.a>
 
                             <p className="text-sm text-zinc-500 mt-4">
-                                No commitment required • Free consultation
+                                {t('note')}
                             </p>
                         </motion.div>
                     </div>

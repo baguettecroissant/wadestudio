@@ -1,39 +1,53 @@
 'use client';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ExternalLink, ArrowUpRight, ArrowRight } from 'lucide-react';
+import { ArrowUpRight, ArrowRight } from 'lucide-react';
 import { useRef } from 'react';
+import { useTranslations } from 'next-intl';
 
 const projects = [
     {
-        title: "FinanceFlow",
-        category: "Fintech SaaS",
-        description: "A complete financial dashboard for modern startups. Real-time analytics, AI forecasting, and seamless bank integration.",
+        title: "Nailsy.fr",
+        category: "SaaS B2B",
+        description: {
+            fr: "Logiciel de gestion complet pour prothésistes ongulaires. Architecture Laravel/Filament avec automatisation avancée et gestion multi-salons.",
+            en: "Complete management software for nail technicians. Laravel/Filament architecture with advanced automation and multi-salon management."
+        },
+        color: "from-pink-500 to-rose-600",
+        stats: ["Laravel/Filament", "B2B SaaS"]
+    },
+    {
+        title: "Poupynails.com",
+        category: "Funnel & Formation",
+        description: {
+            fr: "Écosystème de formation en ligne avec tunnel de vente optimisé, intégration Meta Ads et automatisation email marketing.",
+            en: "Online training ecosystem with optimized sales funnel, Meta Ads integration and email marketing automation."
+        },
+        color: "from-violet-500 to-purple-600",
+        stats: { fr: ["Tunnel de vente", "Meta Ads"], en: ["Sales Funnel", "Meta Ads"] }
+    },
+    {
+        title: "Mauritius Insider",
+        category: "SEO & Média",
+        description: {
+            fr: "Portail touristique et d'expatriation dominant les SERPs sur Maurice. Stratégie SEO sémantique et monétisation par affiliation.",
+            en: "Tourism and expatriation portal dominating SERPs on Mauritius. Semantic SEO strategy and affiliate monetization."
+        },
         color: "from-emerald-500 to-teal-600",
-        stats: ["40% Growth", "2M+ Users"]
-    },
-    {
-        title: "NexusHealth",
-        category: "MedTech Platform",
-        description: "HIPAA-compliant telemedicine platform connecting patients with top specialists. Features secure video, EMR, and scheduling.",
-        color: "from-blue-500 to-cyan-600",
-        stats: ["Secure", "Real-time"]
-    },
-    {
-        title: "Vantage AI",
-        category: "Analytics Tool",
-        description: "Predictive analytics engine for e-commerce. Uses machine learning to optimize inventory and marketing spend.",
-        color: "from-violet-500 to-indigo-600",
-        stats: ["99.9% Accuracy", "AI-Powered"]
+        stats: ["SEO", "Affiliation"]
     }
 ];
 
 export default function WorkSection() {
+    const t = useTranslations('Work');
     const containerRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start end", "end start"]
     });
+
+    // Detect locale from pathname
+    const locale = typeof window !== 'undefined' && window.location.pathname.startsWith('/en') ? 'en' : 'fr';
 
     const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
 
@@ -51,13 +65,13 @@ export default function WorkSection() {
                     className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8"
                 >
                     <div>
-                        <h2 className="text-4xl md:text-5xl font-bold font-heading mb-4">Selected Work</h2>
+                        <h2 className="text-4xl md:text-5xl font-bold font-heading mb-4">{t('title')}</h2>
                         <p className="text-zinc-400 max-w-md text-lg">
-                            We partner with visionary founders to build products that define categories.
+                            {t('description')}
                         </p>
                     </div>
                     <button className="flex items-center gap-2 text-indigo-400 font-medium hover:text-indigo-300 transition-colors group">
-                        View all Case Studies <ArrowUpRight className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+                        {t('viewAll')} <ArrowUpRight className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
                     </button>
                 </motion.div>
 
@@ -98,15 +112,15 @@ export default function WorkSection() {
                                 <h3 className="text-3xl font-bold font-heading mb-4 group-hover:text-indigo-400 transition-colors">{project.title}</h3>
                                 <div className="flex flex-wrap gap-3 mb-6">
                                     <span className="px-3 py-1 rounded-full text-xs font-medium border border-zinc-700 bg-zinc-800/50 text-zinc-300 uppercase tracking-wider">{project.category}</span>
-                                    {project.stats.map((stat, i) => (
+                                    {(Array.isArray(project.stats) ? project.stats : (project.stats as Record<string, string[]>)[locale]).map((stat, i) => (
                                         <span key={i} className="px-3 py-1 rounded-full text-xs font-medium border border-indigo-500/20 bg-indigo-500/10 text-indigo-300">{stat}</span>
                                     ))}
                                 </div>
                                 <p className="text-zinc-400 text-lg mb-8 leading-relaxed">
-                                    {project.description}
+                                    {project.description[locale as 'fr' | 'en']}
                                 </p>
                                 <button className="flex items-center gap-2 text-white font-medium hover:gap-4 transition-all">
-                                    Case Study <ArrowRight size={18} />
+                                    {t('caseStudy')} <ArrowRight size={18} />
                                 </button>
                             </div>
                         </motion.div>
